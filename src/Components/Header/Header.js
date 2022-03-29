@@ -12,7 +12,7 @@ const Header = () => {
 
   const [open, setOpen] = useState(false);
   return (
-    <div>
+    <div className="bg-purple-400 text-yellow-100 py-3">
       <div onClick={() => setOpen(!open)} className="md:hidden">
         {open ? (
           <XIcon className="w-6 h-6"></XIcon>
@@ -21,12 +21,14 @@ const Header = () => {
         )}
       </div>
       <ul
-        className={`md:flex justify-center mt-5 bg-purple-400 py-5 font-serif absolute duration-500 ease-in ${
-          open ? "top-6" : "top-[-220px]"
+        className={`md:flex justify-center md:static w-full bg-purple-400 py-5 font-serif absolute duration-500 ease-in ${
+          open ? "top-12" : "top-[-220px]"
         }`}
       >
         {headerItems.map((item) => (
-          <li className="mr-20">{item.name}</li>
+          <li className="mr-20">
+            <a href={item.url}> {item.name}</a>
+          </li>
         ))}
       </ul>
     </div>
