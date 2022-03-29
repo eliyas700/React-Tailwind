@@ -1,5 +1,5 @@
 import React from "react";
-import { CheckCircleIcon } from "@heroicons/react/solid";
+import { CheckCircleIcon, ArrowRightIcon } from "@heroicons/react/solid";
 const Price = ({ option }) => {
   const { name, price, benifits } = option;
   return (
@@ -22,6 +22,9 @@ const Price = ({ option }) => {
           </p>
         ))}
       </div>
+      <button className="flex mt-7 justify-center items-center text-white py-2 w-full bg-green-700 rounded">
+        Buy Now<ArrowRightIcon className="w-7 h-7 ml-3"></ArrowRightIcon>
+      </button>
     </div>
   );
 };
